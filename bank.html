@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<script>
+class BankAccount {
+  constructor(name, accNo, balance) {
+    this.name = name;
+    this.accNo = accNo;
+    this.balance = balance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+    return amount;
+  }
+
+  withdraw(amount) {
+    if (amount <= this.balance) {
+      this.balance -= amount;
+      return amount;
+    } else {
+      return 0;
+    }
+  }
+}
+
+let name = prompt("Enter account holder name:");
+let accNo = prompt("Enter account number:");
+let balance = parseInt(prompt("Enter initial balance:"));
+
+let acc = new BankAccount(name, accNo, balance);
+
+let dep = parseInt(prompt("Enter deposit amount:"));
+acc.deposit(dep);
+
+let wd = parseInt(prompt("Enter withdraw amount:"));
+let withdrawn = acc.withdraw(wd);
+
+document.write("Account Holder Name: " + acc.name + "<br>");
+document.write("Account Number: " + acc.accNo + "<br>");
+document.write("Initial Balance : "+ balance + "<br>");
+document.write("Deposited Amount: Rs. " + dep + "<br>");
+document.write("Withdrawn Amount: Rs. " + withdrawn + "<br>");
+document.write("Final Balance: Rs. " + acc.balance);
+</script>
+
+</body>
+</html>

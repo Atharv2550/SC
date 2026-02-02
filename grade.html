@@ -1,0 +1,39 @@
+<html>
+<html>
+<head>
+    <title>Grade Card</title>
+</head>
+<body>
+
+<script>
+    let marks = parseInt(prompt("Enter your marks (0-100):"));
+    let grade;
+
+    if (marks >= 90 && marks <= 100) {
+        grade = "A+";
+    } 
+    else if (marks >= 80) {
+        grade = "A";
+    } 
+    else if (marks >= 70) {
+        grade = "B";
+    } 
+    else if (marks >= 60) {
+        grade = "C";
+    } 
+    else if (marks >= 40) {
+        grade = "D";
+    } 
+    else if (marks < 40) {
+        grade = "F";
+    } 
+    else {
+        grade = "Invalid Marks";
+    }
+
+    document.write("Marks: " + marks + "<br>");
+    document.write("Grade: " + grade);
+</script>
+
+</body>
+</html>
