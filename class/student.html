@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Student info</title>
+    </head>
+
+    <body>
+        <h2>Student Details</h2>
+        <script>
+            class Student{
+            constructor(name,rollNO,marks){
+                this.name = name;
+                this.rollNo = rollNo;
+                this.course = course
+                this.marks = marks;
+
+            }
+            display(){
+                document.write("Student Name: "+this.name + "<br>");
+                document.write("Roll Number: "+this.rollNo + "<br>");
+                document.write("Course: "+ this.course + "<br>");
+                document.write("Course: "+ this.marks + "<br>");
+
+            }
+        }
+
+        let name = prompt("Enter Student name: ");
+        let rollNo = prompt("Enter Roll no : ");
+        let course = prompt("Enter marks: ");
+        let marks = prompt("Enter marks: ");
+        let s1 = new Student(name , rollNo , course,marks);
+        s1.display();
+        </script>
+    </body>
+</html>

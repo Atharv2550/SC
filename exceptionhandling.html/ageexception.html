@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Age Exception</title>
+</head>
+<body>
+
+<h3>Age Validation</h3>
+
+Enter Age:
+<input type="number" id="age"><br><br>
+
+<button onclick="checkAge()">Submit</button>
+
+<p id="result"></p>
+
+<script>
+function checkAge(){
+    let result = document.getElementById("result");
+
+    try{
+        let age = document.getElementById("age").value;
+
+        if(age < 18){
+            throw "You are not eligible!";
+        }
+
+        result.innerHTML = "You are eligible.";
+    }
+    catch(error){
+        result.innerHTML = "Error: " + error;
+    }
+    finally{
+        console.log("Age verification completed.");
+    }
+}
+</script>
+
+</body>
+</html>
