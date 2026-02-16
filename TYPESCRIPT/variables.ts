@@ -8,7 +8,7 @@ let marks: number[] = [85, 90, 78, 88];
 
 let studentInfo: [string, number] = ["Atharv", 21];
 
-const collegeName: string = "ABC College";
+const collegeName: string = "D.Y.Patil College";
 
 
 console.log("Name:", studentName);
