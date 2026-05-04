@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input type="text" id="inputBox">
+
+<script>
+let input = document.getElementById("inputBox");
+
+input.addEventListener("focus", function () {
+    console.log("Entered input");
+});
+
+input.addEventListener("blur", function () {
+    console.log("Left input");
+});
+</script>
+
+</body>
+</html>

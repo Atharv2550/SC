@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        <input type = "file" id = "file">
+        <button type = "submit">Submit</button>
+    </form>
+    <p id = "msg"></p>
+    <script>
+        let form = document.querySelector("form")
+        let file = document.querySelector("input")
+        form.addEventListener("submit",function(e){
+            e.preventDefault();
+            let filename = file.value;
+            if(filename===""){
+                alert("Select an Image")
+                return ;
+            }
+            var text = filename.substring(filename.lastIndexOf('.') + 1).toLowerCase();
+            if(text!="png"){
+                alert("Incorrect file choosen")
+                return;
+            }
+        })
+    </script>
+</body>
+</html>
