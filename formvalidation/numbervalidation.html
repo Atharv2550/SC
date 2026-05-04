@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
 <body>
 
 Enter Number:
@@ -24,4 +24,28 @@ function checkNumber(){
 </script>
 
 </body>
+</html> -->
+
+<html>
+    <head>
+        <title>Number Validation</title>
+    </head>
+    <body>
+        <form>
+        <input type="text" placeholder="Number">
+        <button type = "submit">Submit</button>
+        </form>
+        <script>
+            let input = document.querySelector("input").value
+            let form = document.querSelector("form")
+            form.addEventListener("submit",function(event){
+                event.preventDefault()
+                if(input.length!==10){
+                    alert("Invalid")
+                    return ;
+                }
+            })
+            
+        </script>
+    </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
     <title>Username Exception</title>
@@ -37,4 +37,43 @@ function checkUser(){
 </script>
 
 </body>
+</html> -->
+
+
+<html>
+    <head>
+        <title> NameException</title>
+    </head>
+
+    <body>
+        Enter username:
+        <input type="text" id ="username">
+
+        <button onclick="checkuser()">Submit</button>
+
+        <p id="result"></p>
+
+        <script>
+        function checkuser(){
+            let result = document.getElementById("result");
+
+            try{
+                let user = document.getElementById("username").value;
+
+                if(user == ""){
+                    throw "username cannot be empty";
+                }
+
+                result.innerHTML = "username accepted";
+            }
+            catch(error){
+                result.innerHTML = "Error:"  + error;
+            }
+            finally{
+                console.log("Validation Complete");
+            }
+
+        }
+        </script>
+    </body>
 </html>

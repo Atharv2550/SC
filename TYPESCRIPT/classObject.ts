@@ -1,4 +1,4 @@
-class Student {
+class Student1 {
     studentName: string;
     age: number;
     course: string;
@@ -17,6 +17,6 @@ class Student {
 }
 
 
-let student1 = new Student("Atharv", 21, "Computer Science");
+let Student2 = new Student("Atharv", 21, "Computer Science");
 
 student1.display();
